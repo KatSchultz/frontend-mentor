@@ -17,8 +17,11 @@ body {
 }
 
 .card-text {
-  height: 60%;
   padding: 2rem;
+}
+
+.strike-through {
+  text-decoration: line-through;
 }
 
 button {
@@ -28,4 +31,23 @@ button {
   border: none;
   border-radius: 1rem;
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 80vw;
+    max-height: fit-content;
+    align-items: stretch;
+  }
+  img {
+    max-width: 40vw;
+    max-height: 100%;
+  }
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 40vw;
+  }
 }
