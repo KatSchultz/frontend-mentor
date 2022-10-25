@@ -5,7 +5,7 @@
 
 .card-display {
   width: 100vw;
-  height: 40vh;
+  height: 35vh;
   background-image: url("./images/bg-main-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,30 +15,48 @@
 }
 
 .card-front {
+  position: absolute;
+  top: 6rem;
+  left: 10vw;
   width: 250px;
   height: 150px;
   background-image: url("./images/bg-card-front.png");
   background-repeat: no-repeat;
   background-size: contain;
 
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
 }
 
 .name-date-display {
   display: flex;
   justify-content: space-between;
+  padding-top: 1rem;
 }
 
 .card-back {
+  position: absolute;
+  top: 20px;
+  right: 10vw;
   width: 250px;
   height: 150px;
   background-image: url("./images/bg-card-back.png");
   background-repeat: no-repeat;
   background-size: contain;
+  padding: 2rem;
 }
 
 .cvc-display {
-  padding-top: 3rem;
+  position: absolute;
+  top: 58px;
+  right: 30px;
+}
+
+form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
 }
