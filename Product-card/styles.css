@@ -5,26 +5,47 @@ body {
   background-color: hsl(30, 38%, 92%);
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.gray-blue {
+  color: hsl(228, 12%, 48%);
+}
+
+.fraunces {
+  font-family: "Fraunces", serif;
+}
+
+.spaced {
+  letter-spacing: 10px;
+}
+
+p {
+  font-size: 14px;
+}
+
 .card {
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  max-width: 80vw;
-  max-height: 80vh;
+  max-width: 375px;
+  /* max-height: 80vh; */
   margin: 0 auto;
   background-color: white;
 }
 
 picture {
-  max-height: 40vh;
+  max-height: 50vh;
   width: 100%;
 }
 img {
   display: block;
-  max-height: 40vh;
-  object-fit: contain;
+  top: 0;
+  max-height: 50vh;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -33,8 +54,18 @@ img {
   /* flex-basis: 1 1 auto; */
 }
 
+.prices {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  color: hsl(158, 36%, 37%);
+  font-size: xx-large;
+}
 .strike-through {
   text-decoration: line-through;
+  padding-left: 1rem;
 }
 
 button {
@@ -56,11 +87,11 @@ button {
   picture {
     min-width: 40vw;
     max-width: 40vw;
-    max-height: 80vh;
+    max-height: 100vh;
   }
   img {
     max-width: 40vw;
-    max-height: 80vh;
+    max-height: 100vh;
     height: 100%;
   }
   .card-text {
