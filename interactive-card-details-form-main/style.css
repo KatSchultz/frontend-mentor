@@ -63,5 +63,35 @@ form {
 }
 
 label {
-  padding: 0.5rem 0rem;
+  display: block;
+  margin: 0.5rem 0rem;
+}
+
+.mon-yr-inputs {
+  display: flex;
+}
+.date-input-container {
+  max-width: 50%;
+}
+
+.date-input {
+  max-width: 50%;
+  margin-right: 0.5rem;
+}
+
+.cvc-input {
+  display: flex;
+  flex-direction: column;
+}
+.date-cvc {
+  display: flex;
+  max-width: 100%;
+}
+
+button {
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
 }
