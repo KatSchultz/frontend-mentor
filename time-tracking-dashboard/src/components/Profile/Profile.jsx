@@ -8,7 +8,10 @@ export default function Profile() {
   return (
     <div className="user-container">
       <div className="user-display">
-        <img src={jeremy} alt="headshot" id="profile-img" />
+        <div className="img-holder">
+          <img src={jeremy} alt="headshot" id="profile-img" />
+          <div className="img-border"></div>
+        </div>
         <div className="profile-info">
           <p>Report for</p>
           <h1>{user.name}</h1>
