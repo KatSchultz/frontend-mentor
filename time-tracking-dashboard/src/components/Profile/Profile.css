@@ -1,0 +1,28 @@
+.user-container {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 2rem;
+}
+
+.user-display {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 2rem;
+}
+
+#profile-img {
+  padding: 1rem;
+  max-width: 150px;
+}
+
+.profile-info {
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  color: hsl(235, 45%, 61%);
+}
