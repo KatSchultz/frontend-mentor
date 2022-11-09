@@ -2,7 +2,7 @@ import React from "react";
 import jeremy from "../../images/image-jeremy.png";
 import "./Profile.css";
 
-export default function Profile() {
+export default function Profile(props) {
   const user = { name: "Jeremy Robson" };
 
   return (
@@ -18,9 +18,11 @@ export default function Profile() {
         </div>
       </div>
       <div className="nav">
-        <div>Daily</div>
-        <div className="">Weekly</div>
-        <div>Monthly</div>
+        <div onClick={props.setDaily}>Daily</div>
+        <div onClick={props.setWeekly} className="">
+          Weekly
+        </div>
+        <div onClick={props.setMonthly}>Monthly</div>
       </div>
     </div>
   );
