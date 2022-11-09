@@ -1,18 +1,27 @@
-import React, { useEffect } from "react";
-import { getData } from "../services/api.service";
+import React, { useEffect, useState } from "react";
+import { getDataAxios } from "../services/api.service";
 import Profile from "./Profile/Profile";
-
-import TimerDisplay from "./TimerDisplay";
+import TimerDisplay from "./TimerDisplay/TimerDisplay";
 
 export default function TimeTracker() {
+  const [timerData, setTimerData] = useState([]);
+
   useEffect(() => {
-    getData();
+    getDataAxios().then((res) => {
+      setTimerData(res.data);
+      return res;
+    });
   }, []);
+
+  console.log("timerData in TimeTracker: ", timerData);
 
   return (
     <div>
       <Profile />
-      <TimerDisplay />
+      {timerData &&
+        timerData.map((timer) => (
+          <TimerDisplay timer={timer} key={timer.title} />
+        ))}
     </div>
   );
 }

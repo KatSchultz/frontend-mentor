@@ -1,10 +1,5 @@
-export const getData = () => {
-  fetch("data.json")
-    .then((response) => {
-      console.log(response);
-      return response.json();
-    })
-    .then((myJson) => {
-      console.log(myJson);
-    });
-};
+import axios from "axios";
+
+export function getDataAxios() {
+  return axios.get("data.json").then((response) => response);
+}
