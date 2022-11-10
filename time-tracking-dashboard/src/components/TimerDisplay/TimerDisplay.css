@@ -8,12 +8,15 @@ h2 {
 }
 
 .timer-container {
+  /* background-color: aqua; */
+  padding-top: 2rem;
+  border-radius: 2rem 2rem 3rem 3rem;
+  margin-top: 2rem;
 }
 
 .timer-info {
   border-radius: 2rem;
   background-color: hsl(235, 46%, 20%);
-  margin-top: 2rem;
   padding: 2rem;
 }
 

@@ -2,8 +2,42 @@ import React from "react";
 import "./TimerDisplay.css";
 
 export default function TimerDisplay(props) {
+  const propTitle = props.timer.title;
+
+  let titleStyles;
+  let color;
+
+  if (propTitle === "Work") {
+    color = "hsl(15, 100%, 70%)";
+  }
+  if (propTitle === "Play") {
+    color = "hsl(195, 74%, 62%)";
+  }
+  if (propTitle === "Study") {
+    color = "hsl(348, 100%, 68%)";
+  }
+  if (propTitle === "Exercise") {
+    color = "hsl(145, 58%, 55%)";
+  }
+  if (propTitle === "Social") {
+    color = "hsl(264, 64%, 52%)";
+  }
+  if (propTitle === "Self Care") {
+    color = "hsl(43, 84%, 65%)";
+  }
+
+  if (propTitle === "Work") {
+    titleStyles = {
+      backgroundColor: "hsl(15, 100%, 70%)",
+    };
+  }
+
+  titleStyles = {
+    backgroundColor: color,
+  };
+
   return (
-    <div className="timer-container">
+    <div className="timer-container" style={titleStyles}>
       <div className="timer-info">
         <div className="title">
           <h3>{props.timer.title}</h3>
