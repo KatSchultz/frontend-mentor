@@ -6,3 +6,19 @@ h2 {
 .timeP {
   color: hsl(235, 45%, 61%);
 }
+
+.timer-container {
+}
+
+.timer-info {
+  border-radius: 2rem;
+  background-color: hsl(235, 46%, 20%);
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.title,
+.time {
+  display: flex;
+  justify-content: space-between;
+}
