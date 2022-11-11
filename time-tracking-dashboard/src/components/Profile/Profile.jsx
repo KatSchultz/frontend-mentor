@@ -4,6 +4,27 @@ import "./Profile.css";
 
 export default function Profile(props) {
   const user = { name: "Jeremy Robson" };
+  let dailyStyle;
+  let weeklyStyle;
+  let monthlyStyle;
+
+  if (props.timePeriod === "daily") {
+    dailyStyle = {
+      color: "hsl(236, 100%, 87%)",
+    };
+  }
+
+  if (props.timePeriod === "weekly") {
+    weeklyStyle = {
+      color: "hsl(236, 100%, 87%)",
+    };
+  }
+
+  if (props.timePeriod === "monthly") {
+    monthlyStyle = {
+      color: "hsl(236, 100%, 87%)",
+    };
+  }
 
   return (
     <div className="user-container">
@@ -18,11 +39,15 @@ export default function Profile(props) {
         </div>
       </div>
       <div className="nav">
-        <div onClick={props.setDaily}>Daily</div>
-        <div onClick={props.setWeekly} className="">
-          Weekly
+        <div onClick={props.setDaily}>
+          <h4 style={dailyStyle}>Daily</h4>
         </div>
-        <div onClick={props.setMonthly}>Monthly</div>
+        <div onClick={props.setWeekly} className="">
+          <h4 style={weeklyStyle}>Weekly</h4>
+        </div>
+        <div onClick={props.setMonthly}>
+          <h4 style={monthlyStyle}>Monthly</h4>
+        </div>
       </div>
     </div>
   );

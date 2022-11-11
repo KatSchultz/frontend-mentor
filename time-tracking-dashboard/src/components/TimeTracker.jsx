@@ -16,7 +16,6 @@ export default function TimeTracker() {
 
   function setDaily() {
     setTimePeriod("daily");
-    console.log("set to daily");
   }
   function setWeekly() {
     setTimePeriod("weekly");
@@ -33,6 +32,7 @@ export default function TimeTracker() {
         setDaily={setDaily}
         setWeekly={setWeekly}
         setMonthly={setMonthly}
+        timePeriod={timePeriod}
       />
       {timerData &&
         timerData.map((timer) => (
