@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import TimeTracker from "./components/TimeTracker";
+import TimeTracker from "./components/TimeTracker/TimeTracker.jsx";
 
 function App() {
   return (

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getDataAxios } from "../services/api.service";
-import Profile from "./Profile/Profile";
-import TimerDisplay from "./TimerDisplay/TimerDisplay";
+import { getDataAxios } from "../../services/api.service";
+import Profile from "../Profile/Profile";
+import TimerDisplay from "../TimerDisplay/TimerDisplay";
+import "./TimeTracker.css";
 
 export default function TimeTracker() {
   const [timerData, setTimerData] = useState([]);
@@ -27,21 +28,23 @@ export default function TimeTracker() {
   console.log("timerData in TimeTracker: ", timerData);
 
   return (
-    <div>
+    <div className="main-container">
       <Profile
         setDaily={setDaily}
         setWeekly={setWeekly}
         setMonthly={setMonthly}
         timePeriod={timePeriod}
       />
-      {timerData &&
-        timerData.map((timer) => (
-          <TimerDisplay
-            timer={timer}
-            key={timer.title}
-            timePeriod={timePeriod}
-          />
-        ))}
+      <div className="content-container">
+        {timerData &&
+          timerData.map((timer) => (
+            <TimerDisplay
+              timer={timer}
+              key={timer.title}
+              timePeriod={timePeriod}
+            />
+          ))}
+      </div>
     </div>
   );
 }

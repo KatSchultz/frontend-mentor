@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+  .main-container {
+    display: flex;
+    max-height: 80vh;
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+  }
+}
