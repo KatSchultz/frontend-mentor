@@ -31,6 +31,10 @@ h2 {
   padding: 2rem;
 }
 
+.timer-info:hover {
+  background-color: hsl(235, 45%, 35%);
+}
+
 .title,
 .time {
   display: flex;
