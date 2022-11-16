@@ -16,12 +16,14 @@ function App() {
     });
   }, []);
 
+  const totalSpending = data.reduce((a, b) => a + b.amount, 0);
+
   return (
     <div className="App">
       <Heading />
       <div className="content">
-        <Spending />
-        <Total />
+        <Spending data={data} />
+        <Total totalSpending={totalSpending} />
       </div>
     </div>
   );
