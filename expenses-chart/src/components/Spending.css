@@ -1,5 +1,9 @@
 .barchart {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-end;
+}
+
+.spending {
+  padding: 1rem;
 }
