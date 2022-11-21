@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CommentDisplay from "./components/CommentDisplay";
+import React, { useEffect, useState } from "react";
+import { getComments } from "./services/comment.service";
 
 function App() {
+  const [comments, setComments] = useState([]);
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    getComments().then((response) => {
+      setComments(response.data.comments);
+      setUser(response.data.currentUser);
+      console.log(response.data.comments);
+    });
+  }, []);
+
+  console.log(user);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {comments.map((comment) => (
+        <CommentDisplay comment={comment} user={user} />
+      ))}
     </div>
   );
 }
