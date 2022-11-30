@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import ReplyDisplay from "./ReplyDisplay";
+import "./CommentDisplay.css";
 
 export default function CommentDisplay({ comment, user }) {
   const [replies, setReplies] = useState([]);
@@ -14,12 +15,17 @@ export default function CommentDisplay({ comment, user }) {
   let icon = comment.user.image.png;
   console.log(comment.user.image.png);
   return (
-    <div>
-      CommentDisplay
-      <div className="comment-info">
-        <img src={icon} alt="" />
-        <h2>{comment.user.username}</h2>
-        <p>{comment.createdAt}</p>
+    <div className="">
+      <div className="comment-container">
+        <div className="comment-info">
+          <img src={icon} alt="" />
+          <h2>{comment.user.username}</h2>
+          <p>{comment.createdAt}</p>
+        </div>
+        <div className="content">{comment.content}</div>
+        <div className="comment-stats"></div>
+      </div>
+      <div className="reply-container">
         {replies &&
           replies.map((reply) => <ReplyDisplay reply={reply} key={reply.id} />)}
       </div>

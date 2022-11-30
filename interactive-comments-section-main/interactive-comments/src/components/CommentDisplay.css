@@ -1,0 +1,13 @@
+.comment-container {
+  background-color: white;
+  margin-bottom: 1rem;
+}
+
+.comment-info {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.comment-info > * {
+  padding: 1rem;
+}
