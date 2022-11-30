@@ -23,11 +23,23 @@ export default function CommentDisplay({ comment, user }) {
           <p>{comment.createdAt}</p>
         </div>
         <div className="content">{comment.content}</div>
-        <div className="comment-stats"></div>
+        <div className="comment-stats">
+          <div className="score"></div>
+          {comment.user === user ? (
+            <>
+              <div className="delete">Delete</div>
+              <div className="edit">Edit</div>
+            </>
+          ) : (
+            <div className="reply">Reply</div>
+          )}
+        </div>
       </div>
       <div className="reply-container">
         {replies &&
-          replies.map((reply) => <ReplyDisplay reply={reply} key={reply.id} />)}
+          replies.map((reply) => (
+            <ReplyDisplay reply={reply} key={reply.id} user={user} />
+          ))}
       </div>
     </div>
   );

@@ -1,13 +1,17 @@
 .comment-container {
   background-color: white;
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .comment-info {
-  border-radius: 5px;
   display: flex;
   align-items: center;
 }
 .comment-info > * {
   padding: 1rem;
+}
+
+.reply-container {
+  border-left: solid 3px hsl(223, 19%, 93%);
 }
