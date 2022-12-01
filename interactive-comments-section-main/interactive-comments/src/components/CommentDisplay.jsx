@@ -19,8 +19,8 @@ export default function CommentDisplay({ comment, user }) {
       <div className="comment-container">
         <div className="comment-info">
           <img src={icon} alt="" />
-          <h2>{comment.user.username}</h2>
-          <p>{comment.createdAt}</p>
+          <p className="username">{comment.user.username}</p>
+          <p className="creation">{comment.createdAt}</p>
         </div>
         <div className="content">{comment.content}</div>
         <div className="comment-stats">

@@ -10,8 +10,8 @@ export default function ReplyDisplay({ reply, user }) {
       <div className="reply comment-container">
         <div className="comment-info">
           <img src={icon} alt="" />
-          <h2>{reply.user.username}</h2>
-          <p>{reply.createdAt}</p>
+          <p className="username">{reply.user.username}</p>
+          <p className="creation">{reply.createdAt}</p>
         </div>
         <div className="content">{reply.content}</div>
         <div className="comment-stats">
