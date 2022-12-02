@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import ReplyDisplay from "./ReplyDisplay";
+
 import "./CommentDisplay.css";
+import Rating from "./Rating";
 
 export default function CommentDisplay({ comment, user }) {
   const [replies, setReplies] = useState([]);
@@ -24,7 +26,9 @@ export default function CommentDisplay({ comment, user }) {
         </div>
         <div className="content">{comment.content}</div>
         <div className="comment-stats">
-          <div className="score"></div>
+          <div className="score">
+            <Rating score={comment.score} />
+          </div>
           {comment.user === user ? (
             <>
               <div className="delete">Delete</div>

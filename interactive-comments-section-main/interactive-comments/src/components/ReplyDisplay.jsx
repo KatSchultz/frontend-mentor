@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 import "./ReplyDisplay.css";
 
 export default function ReplyDisplay({ reply, user }) {
@@ -15,7 +16,9 @@ export default function ReplyDisplay({ reply, user }) {
         </div>
         <div className="content">{reply.content}</div>
         <div className="comment-stats">
-          <div className="score"></div>
+          <div className="score">
+            <Rating score={reply.score} />
+          </div>
           {reply.user.username === user.username ? (
             <>
               <div className="delete">Delete</div>
