@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import ReplyDisplay from "./ReplyDisplay";
+import { ArrowBackUp } from "tabler-icons-react";
 
 import "./CommentDisplay.css";
 import Rating from "./Rating";
@@ -30,12 +31,15 @@ export default function CommentDisplay({ comment, user }) {
             <Rating score={comment.score} />
           </div>
           {comment.user === user ? (
-            <>
+            <div className="modify">
               <div className="delete">Delete</div>
               <div className="edit">Edit</div>
-            </>
+            </div>
           ) : (
-            <div className="reply">Reply</div>
+            <div className="reply">
+              {" "}
+              <ArrowBackUp size={18} /> Reply
+            </div>
           )}
         </div>
       </div>

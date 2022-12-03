@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "./Rating";
 import "./ReplyDisplay.css";
+import { ArrowBackUp, Trash, Pencil } from "tabler-icons-react";
 
 export default function ReplyDisplay({ reply, user }) {
   console.log(reply);
@@ -20,12 +21,20 @@ export default function ReplyDisplay({ reply, user }) {
             <Rating score={reply.score} />
           </div>
           {reply.user.username === user.username ? (
-            <>
-              <div className="delete">Delete</div>
-              <div className="edit">Edit</div>
-            </>
+            <div className="modify">
+              <div className="delete">
+                {" "}
+                <Trash size={18} />
+                Delete
+              </div>
+              <div className="edit">
+                <Pencil size={18} /> Edit
+              </div>
+            </div>
           ) : (
-            <div className="reply">Reply</div>
+            <div className="reply">
+              <ArrowBackUp size={18} /> Reply
+            </div>
           )}
         </div>
       </div>

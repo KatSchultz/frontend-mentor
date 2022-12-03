@@ -20,3 +20,27 @@
 .reply-container {
   border-left: solid 3px hsl(223, 19%, 93%);
 }
+
+.comment-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modify,
+.delete,
+.edit {
+  display: flex;
+  align-items: center;
+}
+.edit {
+  padding-left: 1rem;
+}
+
+.reply {
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+
+.delete {
+  color: hsl(358, 79%, 66%);
+}
