@@ -2,6 +2,7 @@ import React from "react";
 import Rating from "./Rating";
 import "./ReplyDisplay.css";
 import { ArrowBackUp, Trash, Pencil } from "tabler-icons-react";
+import CommentInfo from "./CommentInfo";
 
 export default function ReplyDisplay({ reply, user }) {
   console.log(reply);
@@ -10,11 +11,7 @@ export default function ReplyDisplay({ reply, user }) {
   return (
     <div className="">
       <div className="reply comment-container">
-        <div className="comment-info">
-          <img src={icon} alt="" />
-          <p className="username">{reply.user.username}</p>
-          <p className="creation">{reply.createdAt}</p>
-        </div>
+        <CommentInfo comment={reply} />
         <div className="content">{reply.content}</div>
         <div className="comment-stats">
           <div className="score">
@@ -32,7 +29,7 @@ export default function ReplyDisplay({ reply, user }) {
               </div>
             </div>
           ) : (
-            <div className="reply">
+            <div className="reply-btn">
               <ArrowBackUp size={18} /> Reply
             </div>
           )}

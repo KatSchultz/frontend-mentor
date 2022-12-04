@@ -28,7 +28,8 @@
 }
 .modify,
 .delete,
-.edit {
+.edit,
+.reply-btn {
   display: flex;
   align-items: center;
 }
@@ -36,7 +37,8 @@
   padding-left: 1rem;
 }
 
-.reply {
+.reply-btn,
+.modify > * {
   color: hsl(238, 40%, 52%);
   font-weight: 700;
 }
