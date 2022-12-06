@@ -2,7 +2,7 @@ import React from "react";
 import Rating from "./Rating";
 import { ArrowBackUp, Trash, Pencil } from "tabler-icons-react";
 
-export default function CommentStats({ comment, user }) {
+export default function CommentStats({ comment, user, startReply }) {
   return (
     <div className="comment-stats">
       <div className="score">
@@ -20,7 +20,7 @@ export default function CommentStats({ comment, user }) {
           </div>
         </div>
       ) : (
-        <div className="reply-btn">
+        <div className="reply-btn" onClick={startReply}>
           {" "}
           <ArrowBackUp size={18} /> Reply
         </div>
