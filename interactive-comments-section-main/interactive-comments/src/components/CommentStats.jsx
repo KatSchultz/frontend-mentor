@@ -2,7 +2,12 @@ import React from "react";
 import Rating from "./Rating";
 import { ArrowBackUp, Trash, Pencil } from "tabler-icons-react";
 
-export default function CommentStats({ comment, user, startReply }) {
+export default function CommentStats({
+  comment,
+  user,
+  startReply,
+  displayModal,
+}) {
   return (
     <div className="comment-stats">
       <div className="score">
@@ -10,7 +15,7 @@ export default function CommentStats({ comment, user, startReply }) {
       </div>
       {comment.user === user ? (
         <div className="modify">
-          <div className="delete">
+          <div className="delete" onClick={displayModal}>
             {" "}
             <Trash size={18} />
             Delete

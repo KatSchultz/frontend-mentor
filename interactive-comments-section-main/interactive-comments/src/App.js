@@ -2,10 +2,12 @@ import "./App.css";
 import CommentDisplay from "./components/CommentDisplay";
 import React, { useEffect, useState } from "react";
 import { getComments } from "./services/comment.service";
+import Modal from "./components/Modal";
 
 function App() {
   const [comments, setComments] = useState([]);
   const [user, setUser] = useState({});
+  const [modalDisplay, setModalDisplay] = useState(false);
 
   useEffect(() => {
     getComments().then((response) => {
@@ -15,11 +17,20 @@ function App() {
     });
   }, []);
 
-  console.log(user);
+  function displayModal() {
+    console.log("display modal clicked");
+    setModalDisplay(true);
+  }
+
   return (
     <div className="App">
+      {modalDisplay && <Modal />}
       {comments.map((comment) => (
-        <CommentDisplay comment={comment} user={user} />
+        <CommentDisplay
+          comment={comment}
+          user={user}
+          displayModal={displayModal}
+        />
       ))}
     </div>
   );

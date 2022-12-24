@@ -6,7 +6,7 @@ import CommentInfo from "./CommentInfo";
 import { useState } from "react";
 import CreateReply from "./CreateReply";
 
-export default function ReplyDisplay({ reply, user }) {
+export default function ReplyDisplay({ reply, user, displayModal }) {
   const [doubleReply, setDoubleReply] = useState(false);
   console.log(reply);
   let icon = reply.user.image.png;
@@ -25,7 +25,7 @@ export default function ReplyDisplay({ reply, user }) {
           </div>
           {reply.user.username === user.username ? (
             <div className="modify">
-              <div className="delete">
+              <div className="delete" onClick={displayModal}>
                 {" "}
                 <Trash size={18} />
                 Delete

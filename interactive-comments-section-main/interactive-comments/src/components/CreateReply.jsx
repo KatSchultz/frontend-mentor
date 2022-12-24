@@ -7,6 +7,8 @@ export default function CreateReply({ user }) {
   return (
     <div className="composing-reply">
       <img src={icon} alt="" />
+      <textarea id="reply-input" name=""></textarea>
+      <button>REPLY</button>
     </div>
   );
 }
