@@ -22,9 +22,13 @@ function App() {
     setModalDisplay(true);
   }
 
+  function closeModal() {
+    setModalDisplay(false);
+  }
+
   return (
     <div className="App">
-      {modalDisplay && <Modal />}
+      {modalDisplay && <Modal closeModal={closeModal} />}
       {comments.map((comment) => (
         <CommentDisplay
           comment={comment}

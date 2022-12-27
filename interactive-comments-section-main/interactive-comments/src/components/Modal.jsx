@@ -1,7 +1,7 @@
 import React from "react";
 import "./Modal.css";
 
-export default function Modal() {
+export default function Modal({ closeModal }) {
   return (
     <div className="modal-background">
       <div className="modal-content">
@@ -11,8 +11,12 @@ export default function Modal() {
           comment and it can't be undone.
         </p>
         <div className="modal-buttons">
-          <button>NO, CANCEL</button>
-          <button>YES, DELETE</button>
+          <button onClick={closeModal} className="btn-cancel">
+            NO, CANCEL
+          </button>
+          <button onClick={closeModal} className="btn-delete">
+            YES, DELETE
+          </button>
         </div>
       </div>
     </div>

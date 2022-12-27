@@ -13,4 +13,28 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-cancel,
+.btn-delete {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border-style: none;
+  font-weight: bold;
+}
+
+.btn-cancel {
+  background-color: hsl(211, 10%, 45%);
+  color: white;
+}
+
+.btn-delete {
+  background-color: hsl(358, 79%, 66%);
+  color: white;
 }
