@@ -12,7 +12,6 @@ export default function Spending({ data }) {
     amounts.push(elem.amount);
   });
   const max = Math.max(...amounts);
-  console.log(max);
 
   return (
     <div>

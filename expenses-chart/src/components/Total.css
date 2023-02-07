@@ -1,0 +1,6 @@
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  border-top: solid 2px hsl(10, 79%, 95%);
+}

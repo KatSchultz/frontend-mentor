@@ -7,7 +7,7 @@ export default function Bar({ elem, max }) {
   }
 
   const styles = {
-    height: elem.amount * 5 + "px",
+    height: elem.amount * 4 + "px",
     width: 40 + "px",
     backgroundColor: color,
     marginBottom: 1 + "rem",
