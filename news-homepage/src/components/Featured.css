@@ -1,0 +1,14 @@
+.featured-img {
+  max-width: 100%;
+}
+
+.featured-text {
+  line-height: 2;
+}
+
+.featured-btn {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  border: none;
+  padding: 1rem;
+}

@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Featured from "./components/Featured";
-import New from "./components/New";
+
 import AdditionalStories from "./components/AdditionalStories";
+import New from "./components/New";
 
 function App() {
   return (
