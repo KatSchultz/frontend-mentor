@@ -1,0 +1,16 @@
+.news-section {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  padding: 1rem;
+}
+.new-title {
+  color: hsl(35, 77%, 62%);
+}
+
+.story-border {
+  border-bottom: solid 1px hsl(233, 8%, 79%);
+}
+
+.story-text {
+  color: hsl(233, 8%, 79%);
+}
