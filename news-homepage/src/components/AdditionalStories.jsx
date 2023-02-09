@@ -6,11 +6,11 @@ import pic3 from "../images/image-gaming-growth.jpg";
 
 export default function AdditionalStories() {
   return (
-    <div>
+    <div className="additional-stories">
       <div className="stories story-1">
-        <div className="story-img">
+        <div className="story-img first-half">
           <picture>
-            <img src={pic1} alt="" />
+            <img src={pic1} alt="" className="story-img" />
           </picture>
         </div>
         <div className="story-content">
@@ -22,9 +22,9 @@ export default function AdditionalStories() {
         </div>
       </div>
       <div className="stories story-1">
-        <div className="story-img">
+        <div className="story-img first-half">
           <picture>
-            <img src={pic2} alt="" />
+            <img src={pic2} alt="" className="story-img" />
           </picture>
         </div>
         <div className="story-content">
@@ -36,9 +36,9 @@ export default function AdditionalStories() {
         </div>
       </div>
       <div className="stories story-1">
-        <div className="story-img">
+        <div className="story-img first-half">
           <picture>
-            <img src={pic3} alt="" />
+            <img src={pic3} alt="" className="story-img" />
           </picture>
         </div>
         <div className="story-content">

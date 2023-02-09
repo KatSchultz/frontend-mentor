@@ -2,13 +2,23 @@
   background-color: hsl(240, 100%, 5%);
   color: hsl(36, 100%, 99%);
   padding: 1rem;
+  width: 100%;
+}
+.margin-btm {
+  margin-bottom: 0.5rem;
+}
+.story {
+  margin: 1rem 0rem;
 }
 .new-title {
   color: hsl(35, 77%, 62%);
+  font-size: x-large;
 }
 
 .story-border {
   border-bottom: solid 1px hsl(233, 8%, 79%);
+  width: 100%;
+  margin: 1rem 0rem;
 }
 
 .story-text {
