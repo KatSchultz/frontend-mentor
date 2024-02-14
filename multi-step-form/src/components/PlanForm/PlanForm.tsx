@@ -1,6 +1,9 @@
-import { useState } from "react";
+interface Props {
+  interval: string;
+  setInterval: (interval: string) => void;
+}
 
-const PlanForm = () => {
+const PlanForm = ({ interval, setInterval }: Props) => {
   const plans = [
     {
       name: "Arcade",
@@ -14,8 +17,6 @@ const PlanForm = () => {
     },
     { name: "Pro", monthlyPrice: "$15/mo", yearlyPrice: "$150/yr" },
   ];
-
-  const [interval, setInterval] = useState("monthly");
 
   return (
     <form action="">
